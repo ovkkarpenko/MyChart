@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FABF0A4925825E5800630F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF0A4825825E5800630F05 /* AppDelegate.swift */; };
-		FABF0A4B25825E5800630F05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF0A4A25825E5800630F05 /* SceneDelegate.swift */; };
-		FABF0A4D25825E5800630F05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF0A4C25825E5800630F05 /* ViewController.swift */; };
+		FABF0A4D25825E5800630F05 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF0A4C25825E5800630F05 /* ChartViewController.swift */; };
 		FABF0A5025825E5800630F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF0A4E25825E5800630F05 /* Main.storyboard */; };
 		FABF0A5225825E5800630F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF0A5125825E5800630F05 /* Assets.xcassets */; };
 		FABF0A5525825E5800630F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF0A5325825E5800630F05 /* LaunchScreen.storyboard */; };
+		FABF0A6725825EAA00630F05 /* MyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF0A6625825EAA00630F05 /* MyChart.swift */; };
+		FAFD635F25828EA7004F8479 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD635E25828EA7004F8479 /* Chart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FABF0A4525825E5800630F05 /* ChartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABF0A4825825E5800630F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FABF0A4A25825E5800630F05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FABF0A4C25825E5800630F05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FABF0A4C25825E5800630F05 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		FABF0A4F25825E5800630F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABF0A5125825E5800630F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABF0A5425825E5800630F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABF0A5625825E5800630F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABF0A6625825EAA00630F05 /* MyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChart.swift; sourceTree = "<group>"; };
+		FAFD635E25828EA7004F8479 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,72 @@
 		FABF0A4725825E5800630F05 /* ChartApp */ = {
 			isa = PBXGroup;
 			children = (
-				FABF0A4825825E5800630F05 /* AppDelegate.swift */,
-				FABF0A4A25825E5800630F05 /* SceneDelegate.swift */,
-				FABF0A4C25825E5800630F05 /* ViewController.swift */,
+				FABF0A6025825E7000630F05 /* Modules */,
+				FABF0A5E25825E6500630F05 /* SupportingFiles */,
 				FABF0A4E25825E5800630F05 /* Main.storyboard */,
+			);
+			path = ChartApp;
+			sourceTree = "<group>";
+		};
+		FABF0A5E25825E6500630F05 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FABF0A4825825E5800630F05 /* AppDelegate.swift */,
 				FABF0A5125825E5800630F05 /* Assets.xcassets */,
 				FABF0A5325825E5800630F05 /* LaunchScreen.storyboard */,
 				FABF0A5625825E5800630F05 /* Info.plist */,
 			);
-			path = ChartApp;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FABF0A6025825E7000630F05 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FABF0A6225825E7900630F05 /* ChartScreen */,
+				FABF0A6125825E7400630F05 /* Common */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FABF0A6125825E7400630F05 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FABF0A6525825E9700630F05 /* Repositories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FABF0A6225825E7900630F05 /* ChartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD635D25828E9F004F8479 /* Models */,
+				FABF0A6425825E8500630F05 /* Controllers */,
+			);
+			path = ChartScreen;
+			sourceTree = "<group>";
+		};
+		FABF0A6425825E8500630F05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FABF0A4C25825E5800630F05 /* ChartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FABF0A6525825E9700630F05 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FABF0A6625825EAA00630F05 /* MyChart.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FAFD635D25828E9F004F8479 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD635E25828EA7004F8479 /* Chart.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABF0A4D25825E5800630F05 /* ViewController.swift in Sources */,
+				FAFD635F25828EA7004F8479 /* Chart.swift in Sources */,
+				FABF0A4D25825E5800630F05 /* ChartViewController.swift in Sources */,
+				FABF0A6725825EAA00630F05 /* MyChart.swift in Sources */,
 				FABF0A4925825E5800630F05 /* AppDelegate.swift in Sources */,
-				FABF0A4B25825E5800630F05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
